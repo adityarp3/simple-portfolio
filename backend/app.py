@@ -76,10 +76,18 @@ def get_portfolio():
         'title': 'Computer Science/Math Student',
         'email': 'apardeshi134@gmail.com',
         'skills': [
-            'Python', 'C', 'C++', 'Flask', 'Java'
+            'Python', 'C', 'C++', 'Java',
             'Git', 'NumPy', 'SciKitLearn', 'Pandas',
-            'Matplotlib', 'SQL', 'PostgreSQL', 'FastAPI',
-            'React'
+            'Matplotlib', 'SQL', 'Flask',  'PostgreSQL', 'FastAPI',
+            'React'],
+        'experience': [
+            {
+                'role': 'Machine Learning Intern',
+                'company': 'example company',
+                'duration': 'May 2025 - ',
+                'description': 'Worked on regression model to predict curl distance in aluminum DC casting.',
+                'technologies': ['Python, NumPy, Pandas, SciKitLearn, MatPlotLib, Logger Pro']
+            }
         ]
     }
 

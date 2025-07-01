@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Mail, MapPin, Star, GitFork, ExternalLink, Users, Code, Loader, Folder } from 'lucide-react';
+import { Github, Mail, MapPin, Star, GitFork, ExternalLink, Users, Code, Loader, Folder, Briefcase } from 'lucide-react';
 import './App.css';
 
 export default function Portfolio() {
@@ -79,6 +79,39 @@ export default function Portfolio() {
                 <p className="profile-bio">{portfolio.bio}</p>
               )}
             </div>
+
+            {/* Experience Section */}
+            {portfolio?.experience && portfolio.experience.length > 0 && (
+              <div className="experience-section">
+                <h3 className="section-title">
+                  <Briefcase className="section-icon" />
+                  Experience
+                </h3>
+                <div className="experience-list">
+                  {portfolio.experience.map((exp, index) => (
+                    <div key={index} className="experience-item">
+                      <div className="experience-header">
+                        <h4 className="experience-role">{exp.role}</h4>
+                        <span className="experience-duration">{exp.duration}</span>
+                      </div>
+                      <p className="experience-company">{exp.company}</p>
+                      {exp.description && (
+                        <p className="experience-description">{exp.description}</p>
+                      )}
+                      {exp.technologies && exp.technologies.length > 0 && (
+                        <div className="experience-tech">
+                          {exp.technologies.map((tech, i) => (
+                            <span key={i} className="tech-tag">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Contact Links */}
             <div className="contact-section">
